@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reserva de Grass</title>
+</head>
+<body>
+    <h1>Hacer una Reserva</h1>
+    <form method="POST" action="/reservar">
+        Nombre: <input type="text" name="nombre" required><br>
+        Fecha: <input type="text" name="fecha" required><br>
+        <input type="submit" value="Reservar">
+    </form>
+
+    <h2>Reservas Registradas</h2>
+    <ul>
+        {% for r in reservas %}
+            <li>{{ r.nombre }} - {{ r.fecha }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
